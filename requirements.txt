@@ -1,0 +1,5 @@
+Packages needed for the project:
+
+django - 4.1.7
+python decouple
+django-bootstrap-5
