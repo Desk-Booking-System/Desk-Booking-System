@@ -1,8 +1,6 @@
 from django.db import models
 
-# Create your models here.
-<<<<<<< HEAD
-=======
+
 
 class Desk(models.Model):
     desk_name= models.CharField(max_length=50)
@@ -14,4 +12,4 @@ class Desk(models.Model):
         return self.desk_name + ": " + self.employee_reserved_name
 
 
->>>>>>> f115c33 (creating desk model, correcting requirements, and adding files on .gitignor)
+
