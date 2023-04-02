@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-Packages needed for the project:
 
-django - 4.1.7
-python decouple
-django-bootstrap-5
-=======
-django==4.1.7
+django == 4.1.7
 python-decouple==3.4
-django-bootstrap-5==3.1.1
->>>>>>> f115c33 (creating desk model, correcting requirements, and adding files on .gitignor)
+django-bootstrap-5
+
