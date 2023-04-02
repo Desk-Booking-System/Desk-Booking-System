@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 .env
+=======
+.env
+.venv
+.db.sqlite3
+>>>>>>> f115c33 (creating desk model, correcting requirements, and adding files on .gitignor)
