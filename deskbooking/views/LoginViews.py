@@ -1,9 +1,8 @@
-
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from ..forms import LoginForm
 from django.http import HttpResponse
-# Create your views here.
+
 
 
 def user_login(request):
@@ -35,8 +34,3 @@ def user_login(request):
             form = LoginForm()
             return render(request, 'account.html', {'form': form})
       
-
-# def view_page(request):
-#     if request.method == "GET":
-#         form = LoginForm()
-#         return render(request, 'account.html', {'form': form})
