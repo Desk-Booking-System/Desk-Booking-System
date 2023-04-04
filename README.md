@@ -21,9 +21,9 @@ The purpose of this project is to create a desk booking system for emloyees of a
 
 The technologies that will used in this project are:
 
-- Bootstrap
-- Python Django
-- SQLite
+- Bootstrap (for the UI)
+- Python Django (for backend server)
+- SQLite (for DB)
 
 ## Samples examples of code
 
