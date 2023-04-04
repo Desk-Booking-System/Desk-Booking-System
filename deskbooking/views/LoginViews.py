@@ -15,12 +15,13 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return redirect('success')
+                    messages.success(request, 'You have successfully logged in')
+                    return redirect('login')
                 else:
-                    messages.error(request, 'Your account is disabled.')
+                    messages.error(request, 'Your account is disabled')
                     return redirect('login')
             else:
-                messages.error(request, 'Invalid login credentials.')
+                messages.error(request, 'Invalid login credentials')
                 return redirect('login')
         else:
             form = LoginForm()
