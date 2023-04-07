@@ -25,6 +25,10 @@ The technologies that will used in this project are:
 - Python Django
 - SQLite3
 
+## Progress
+
+To stay updated with the projects process please look into the [Trello](https://trello.com/b/phcYRJtc/desk-booking-system) created for the project.
+
 ## Samples examples of code
 
 ### Example of views

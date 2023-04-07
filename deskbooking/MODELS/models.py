@@ -9,7 +9,7 @@ class Desk(models.Model):
     employee_reserved_name = models.CharField(max_length=200) # the name of the employee who reserved the desk
     
     def __str__(self):
-        return self.desk_name + ": " + self.employee_reserved_name
+        return self.desk_name 
 
 
 
