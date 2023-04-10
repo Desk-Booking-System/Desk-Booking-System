@@ -1,7 +1,8 @@
 from urllib import request
-from ..MODELS.models import Desk
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+
+from deskbooking.MODELS.models import Desk
 
 from ..views import LoginViews
 
