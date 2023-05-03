@@ -1,30 +1,33 @@
 from urllib import request
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-
 from deskbooking.MODELS.models import Desk
+from ..serializer import DeskSerializer
+from rest_framework import status
+from rest_framework.views import APIView
+from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.decorators import api_view
+import json
 
-from ..views import LoginViews
 
-@csrf_exempt
-# def rend_desk(request):
-    # if request.method == "GET":
-        # desk=Desk.objects.all()
-        # is_desk = request.GET.get('desk_name')
-        # return HttpResponse(is_desk)
-    # elif request.method == "PUT":
-        # desk=Desk()
-        # desk.is_available = False
-        # desk.date = request.POST.get('date')
-        # desk.employee_reserved_name = request.POST.get('employee_reserve_name')
-        # desk.save()
-        # return HttpResponse("ok")
+@api_view(['GET', 'POST'])
 
 @csrf_exempt
 def add_desk(request):
+    
+        
     if request.method == "POST":
-        desk=Desk()
-        desk.desk_name= request.POST.get('desk_name')
-        desk.is_available= request.POST.get('is_available')
-        desk.save()
+        serializer = DeskSerializer(data=request.data)
+        # print(serializer)
+        if serializer.is_valid():
+            serializer.save()
+            return HttpResponse(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return HttpResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     return HttpResponse(request)
+
+
+def Desks(request):
+    desks = Desk.objects.all()
+    return render(request , "deskbook.html", {"desks":desks} )

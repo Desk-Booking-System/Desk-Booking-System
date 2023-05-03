@@ -31,6 +31,4 @@ def user_login(request):
         return render(request, 'account.html', {'form': form})
 
 
-def deskbook(request):
-    desks = [1, 2, 3]
-    return render(request, 'deskbook.html', {'desks': desks})
+

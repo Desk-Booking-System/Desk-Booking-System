@@ -1,12 +1,12 @@
 from django.urls import path
-from .views.LoginViews import user_login, deskbook
+from .views.LoginViews import user_login
 from .views.error_404_views import errorhandling
-from .views.DeskViews import add_desk
+from .views.DeskViews import add_desk, Desks
 
 urlpatterns = [
  path('login/', user_login, name='login'),
- path('deskbook/', deskbook, name='deskbook'),
- path('add/', add_desk, name='add'),
+ path('deskbook/', Desks, name='deskbook'),
+ 
 ]
 
 handler404 = errorhandling
