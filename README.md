@@ -25,6 +25,22 @@ The technologies that will used in this project are:
 - Python Django
 - SQLite3
 
+## Build - Docker
+
+To run the Django application using Docker Compose, follow these steps:
+
+1. Make sure you have Docker and Docker Compose installed on your machine.
+
+2. Clone the project repository from GitHub.
+
+3. Open a terminal window and navigate to the root directory of the project.
+
+4. Run the following command to start the Docker container:
+
+    `docker-compose up`
+    
+The application should now be running. Open a web browser and go to http://localhost:8000 to view the homepage.
+
 ## Progress
 
 To stay updated with the projects process please look into the [Trello](https://trello.com/b/phcYRJtc/desk-booking-system) created for the project.
