@@ -1,0 +1,51 @@
+/* deskbook.html */
+#logo{
+    justify-content: center;
+    text-align: center;
+    font: bolder;
+    margin: 2rem;
+}
+.col-4{
+    margin-bottom: 2rem;
+    
+}
+.card{
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+h2{
+    text-align: center;
+}
+button{
+    width: 100%;
+}
+
+
+/* account.html */
+
+.container{
+    margin-top: 5rem;
+}
+#bx{
+    border-radius: 1rem;   
+    
+}
+#crd{
+    padding: 2.5rem;
+}
+
+input{
+    width: 100%;
+}
+
+.error{
+    color: red;
+    font: bold;
+    margin-bottom: 1rem;
+}
+
+.success{
+    color: green;
+    font: bold;
+    margin-bottom: 1rem;
+}

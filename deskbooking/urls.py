@@ -4,7 +4,7 @@ from .views.error_404_views import errorhandling
 from .views.DeskViews import add_desk, Desks
 
 urlpatterns = [
- path('login/', user_login, name='login'),
+ path('', user_login, name='login'),
  path('deskbook/', Desks, name='deskbook'),
  
 ]
