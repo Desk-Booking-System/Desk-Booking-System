@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from ..forms import LoginForm
-
+from django.contrib.auth.models import User
 
 def user_login(request):
     if request.method == 'GET':

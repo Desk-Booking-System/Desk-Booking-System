@@ -11,7 +11,7 @@
             <div class="card" >
                 <div class="card-body">
                     <h2 class="card-title">
-
+                    
                     {{ desk.desk_name}}
 
                     </h2>
@@ -23,23 +23,35 @@
         <div class="modal fade" id="id{{desk.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">{{desk.desk_name}}</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <label >Enter your name:</label>
-                    <br />
-                    <input type="text" placeholder="Your name" label="Enter your name" />
-                    <br />
-                    <br />
-                    <label >Enter the date you will come:</label>
-                    <br />
-                    <input type="date" label="Enter the date you will come" />
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">{{desk.desk_name}}</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                            
+                        <form method="post" class="form" >
+                                    <div class="modal-body">
+                                            {% csrf_token %}
+                                            <label >Desk book for:</label>
+                                            <br />
+                                            <b>
+                                            {{user.username}}
+                                            </b>
+                                            <br />
+                                            <label >Desk ID:</label>
+                                            <br />
+                                            <b>
+                                            <input type="hidden" value={{desk.id}} id="hidden_id" />
+                                            </b>
+                                            <br />
+                                            <br />
+                                            <label >Date:</label>
+                                            
+                                            {{deskform.date}}
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-primary">Save</button>
+                                                <button type="button" class="btn" id="close" data-bs-dismiss="modal">Close</button>
+                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

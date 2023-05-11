@@ -1,10 +1,12 @@
 /* deskbook.html */
+
 #logo{
     justify-content: center;
     text-align: center;
     font: bolder;
     margin: 2rem;
 }
+
 .col-4{
     margin-bottom: 2rem;
     
@@ -13,9 +15,11 @@
     border-radius: 10px;
     box-shadow: 10px 10px 5px #aaaaaa;
 }
+
 h2{
     text-align: center;
 }
+
 button{
     width: 100%;
 }
@@ -48,4 +52,9 @@ input{
     color: green;
     font: bold;
     margin-bottom: 1rem;
+}
+
+#close{
+    background-color: red;
+    color: white;
 }
